@@ -2,10 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import './Home.css'
 import Header from "./Header";
-import { createContext } from "react";
 
 function Home() {
-  const [movieList, setMovieList] = useState();
+  const [movieList, setMovieList] = useState([]);
   const [refresh, setRefresh] = useState(true);
 
   useEffect(() => {
@@ -28,7 +27,12 @@ function Home() {
 
       <div className="movie-list">
         {
-          movieList?.map((movie) => <div className="movie-item" key={movie.id}>{movie.title}</div>)
+          movieList.length ? movieList.map((movie) => 
+            <div className="movie-item" key={movie.id}>
+              {'Title: ' + movie.title + '\n'}
+              {'Release Date: ' + movie.release_date}
+            </div>)
+            : <div className="movie-item">No movies match your search!</div>
         }
       </div>
     </>

@@ -1,9 +1,13 @@
 import React from "react";
 import Home from "./Home";
+import MovieEdit from "./MovieEdit";
 
 function App() {
   return(
-    <Home/>
+    <>
+      <Home/>
+      <MovieEdit/>
+    </>
   )
 }
 

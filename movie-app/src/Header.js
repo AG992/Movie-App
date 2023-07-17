@@ -18,7 +18,7 @@ function Header({movieList, setMovieList, refresh, setRefresh}) {
       }}/>
       <input type='submit' onClick={() => {
         const filteredMovies = movieList.filter(movie => movie.title.includes(searchTerm));
-        // console.log(filteredMovies);
+        console.log(filteredMovies);
         setMovieList(filteredMovies);
       }}/>
     </div>

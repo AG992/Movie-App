@@ -13,7 +13,8 @@ function App() {
     <div>
       <ui>
         {
-          movies.map((movie) => <li>{movie.title}</li>)}
+          movies.map((movie) => <li key={movie.title}>{movie.title}</li>)
+        }
       </ui>
     </div>
   )

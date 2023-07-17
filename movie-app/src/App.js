@@ -1,22 +1,9 @@
 import React from "react";
-
-const movies = [
-  {title: 'Mean Girls'},
-  {title: 'Hackers'},
-  {title: 'The Grey'},
-  {title: 'Sunshine'},
-  {title: 'Ex Machina'},
-];
+import Home from "./Home";
 
 function App() {
-  return (
-    <div>
-      <ui>
-        {
-          movies.map((movie) => <li key={movie.title}>{movie.title}</li>)
-        }
-      </ui>
-    </div>
+  return(
+    <Home/>
   )
 }
 
